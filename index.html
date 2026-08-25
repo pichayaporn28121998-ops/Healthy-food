@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GREEN BITE — อาหารเพื่อสุขภาพ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Prompt:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F7F0DF;
+  --cream2:#FFF9EC;
+  --green:#163C2A;
+  --lime:#C9E86A;
+  --orange:#F28C45;
+  --black:#171713;
+  --white:#fffdf6;
+  --line:3px solid var(--black);
+  --shadow:7px 7px 0 var(--black);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--cream);
+  color:var(--black);
+  font-family:"Prompt",sans-serif;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img{width:100%;display:block;object-fit:cover}
+.nav{
+  width:min(1180px,92%);
+  margin:20px auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border:var(--line);
+  padding:13px 18px;
+  background:var(--cream2);
+  box-shadow:5px 5px 0 var(--black);
+  position:relative;
+  z-index:10;
+}
+.logo{font-size:25px;font-weight:800;letter-spacing:-1px}
+.logo span{color:var(--orange)}
+.nav-links{display:flex;gap:26px;font-weight:600;font-size:14px}
+.nav-links a{position:relative}
+.nav-links a:after{
+  content:"";position:absolute;width:0;height:3px;background:var(--orange);
+  left:0;bottom:-5px;transition:.25s
+}
+.nav-links a:hover:after{width:100%}
+.menu{display:none;font-size:25px;cursor:pointer}
+.hero{
+  width:min(1180px,92%);
+  min-height:650px;
+  margin:70px auto 110px;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:50px;
+  align-items:center;
+  position:relative;
+}
+.hero-copy{position:relative;z-index:2}
+.kicker{
+  display:inline-block;background:var(--lime);border:var(--line);
+  padding:7px 13px;font-size:13px;font-weight:700;
+  transform:rotate(-2deg);margin-bottom:22px;
+}
+h1{
+  font-size:clamp(58px,8vw,108px);
+  line-height:.88;letter-spacing:-5px;font-weight:800;
+}
+h1 em{font-style:normal;color:var(--orange)}
+.hero-copy p{
+  margin:30px 0;font-family:"DM Sans",sans-serif;
+  font-size:18px;line-height:1.6;max-width:550px;
+}
+.btn{
+  display:inline-block;background:var(--green);color:white;
+  padding:15px 25px;border:var(--line);box-shadow:var(--shadow);
+  font-weight:700;transition:.2s;
+}
+.btn:hover{transform:translate(5px,5px);box-shadow:2px 2px 0 var(--black)}
+.hero-image{position:relative}
+.hero-image img{
+  height:560px;border:var(--line);box-shadow:var(--shadow);
+  border-radius:180px 180px 25px 25px;
+}
+.sticker{
+  position:absolute;right:-25px;top:35px;
+  width:125px;height:125px;background:var(--orange);
+  border:var(--line);border-radius:50%;
+  display:grid;place-items:center;text-align:center;
+  font-weight:800;font-size:14px;transform:rotate(12deg);
+}
+.shape{
+  position:absolute;border:var(--line);background:var(--lime);
+  width:110px;height:110px;transform:rotate(25deg);
+  right:-55px;bottom:30px;z-index:-1;
+}
+.section{width:min(1180px,92%);margin:0 auto 120px}
+.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:35px}
+.section-head h2{font-size:clamp(40px,6vw,70px);line-height:.95;letter-spacing:-3px}
+.section-head p{max-width:400px;font-family:"DM Sans";line-height:1.6}
+.food-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.food-card{
+  border:var(--line);background:var(--cream2);box-shadow:var(--shadow);
+  transition:.25s;overflow:hidden
+}
+.food-card:hover{transform:translateY(-10px) rotate(-1deg)}
+.food-card img{height:270px}
+.food-card div{padding:22px}
+.food-card h3{font-size:23px;margin-bottom:8px}
+.food-card p{font-family:"DM Sans";line-height:1.5}
+.marquee{
+  background:var(--green);color:var(--lime);border-block:var(--line);
+  padding:18px 0;overflow:hidden;margin-bottom:110px;
+}
+.marquee-inner{
+  white-space:nowrap;font-size:38px;font-weight:800;
+  animation:scroll 18s linear infinite;
+}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.story{
+  display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:center
+}
+.story img{height:560px;border:var(--line);box-shadow:var(--shadow);transform:rotate(-2deg)}
+.story-copy h2{font-size:clamp(42px,6vw,76px);line-height:.95;letter-spacing:-3px;margin-bottom:25px}
+.story-copy p{font-family:"DM Sans";font-size:18px;line-height:1.7;margin-bottom:25px}
+footer{
+  background:var(--green);color:var(--cream);
+  padding:60px 4%;margin-top:100px;
+}
+.footer-inner{width:min(1180px,100%);margin:auto;display:flex;justify-content:space-between;gap:30px}
+.footer-logo{font-size:35px;font-weight:800}
+.footer-logo span{color:var(--lime)}
+footer p{font-family:"DM Sans";max-width:350px;line-height:1.6}
+@media(max-width:800px){
+  .nav-links{
+    display:none;position:absolute;top:65px;left:0;width:100%;
+    background:var(--cream2);border:var(--line);padding:20px;
+    flex-direction:column;gap:18px
+  }
+  .nav-links.open{display:flex}
+  .menu{display:block}
+  .hero{grid-template-columns:1fr;margin-top:45px}
+  .hero-image img{height:430px}
+  .food-grid{grid-template-columns:1fr}
+  .story{grid-template-columns:1fr}
+  .story img{height:400px}
+  .section-head{display:block}
+  .section-head p{margin-top:18px}
+  .footer-inner{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="logo" href="index.html">GREEN<span>BITE</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="work.html">Our Food</a>
+    <a href="process.html">Process</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="menu" onclick="toggleMenu()">☰</div>
+</nav>
+
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <span class="kicker">GOOD FOOD / GOOD MOOD</span>
+    <h1>กินดี<br>แบบ <em>มีสีสัน.</em></h1>
+    <p>อาหารเพื่อสุขภาพที่ทำให้การกินคลีนไม่จำเจ สด อร่อย มีคุณค่า และสนุกกับทุกคำ</p>
+    <a class="btn" href="services.html">ค้นพบเมนูของเรา →</a>
+  </div>
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1000&q=85" alt="Healthy food">
+    <div class="sticker">100%<br>FRESH<br>DAILY</div>
+    <div class="shape"></div>
+  </div>
+</section>
+
+<div class="marquee">
+  <div class="marquee-inner">FRESH • COLORFUL • HEALTHY • DELICIOUS • FRESH • COLORFUL • HEALTHY • DELICIOUS • </div>
+</div>
+
+<section class="section">
+  <div class="section-head">
+    <h2>กินอะไร<br>วันนี้?</h2>
+    <p>เมนูที่เราออกแบบให้ครบทั้งโปรตีน ผัก และคาร์บดี ๆ เพื่อให้คุณมีพลังตลอดวัน</p>
+  </div>
+  <div class="food-grid">
+    <article class="food-card">
+      <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=85" alt="">
+      <div><h3>Green Power Bowl</h3><p>ผักสด อะโวคาโด ไข่ และธัญพืช อิ่มแบบเบาสบาย</p></div>
+    </article>
+    <article class="food-card">
+      <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=85" alt="">
+      <div><h3>Rainbow Salad</h3><p>สีสันจากผักหลากชนิด พร้อมน้ำสลัดสูตรพิเศษ</p></div>
+    </article>
+    <article class="food-card">
+      <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=85" alt="">
+      <div><h3>Daily Balance</h3><p>มื้อสมดุลสำหรับวันที่ต้องการทั้งพลังงานและความสดชื่น</p></div>
+    </article>
+  </div>
+</section>
+
+<section class="section story">
+  <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1000&q=85" alt="">
+  <div class="story-copy">
+    <span class="kicker">OUR PHILOSOPHY</span>
+    <h2>Healthy<br>should be<br><em>fun.</em></h2>
+    <p>เราเชื่อว่าอาหารเพื่อสุขภาพไม่ควรน่าเบื่อ GREENBITE จึงนำวัตถุดิบสดใหม่มาสร้างเป็นมื้ออาหารที่ทั้งอร่อย สวย และดีต่อร่างกาย</p>
+    <a class="btn" href="process.html">ดูวิธีการของเรา →</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">GREEN<span>BITE</span></div>
+    <p>อาหารเพื่อสุขภาพที่อยากให้คุณกินดีได้ทุกวัน โดยไม่ต้องยอมแพ้ให้กับความอร่อย</p>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){document.getElementById("navLinks").classList.toggle("open")}
+</script>
+</body>
+</html>
