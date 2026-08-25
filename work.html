@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Food — GREENBITE</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Prompt:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#F7F0DF;--light:#FFF9EC;--green:#163C2A;--lime:#C9E86A;--orange:#F28C45;--black:#171713}
+*{box-sizing:border-box;margin:0;padding:0}body{background:var(--cream);color:var(--black);font-family:Prompt,sans-serif}a{color:inherit;text-decoration:none}
+.nav{width:92%;max-width:1180px;margin:20px auto;padding:13px 18px;border:3px solid;background:var(--light);box-shadow:5px 5px #171713;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:25px;font-weight:800}.logo span{color:var(--orange)}.nav-links{display:flex;gap:25px;font-weight:600;font-size:14px}.menu{display:none}
+header{width:92%;max-width:1180px;margin:90px auto 60px}header h1{font-size:clamp(60px,9vw,115px);line-height:.82;letter-spacing:-5px}header h1 span{color:var(--orange)}
+.gallery{width:92%;max-width:1180px;margin:auto;display:grid;grid-template-columns:repeat(12,1fr);gap:25px}
+.item{border:3px solid;box-shadow:7px 7px #171713;background:var(--light);overflow:hidden;transition:.25s}.item:hover{transform:rotate(-2deg) scale(1.02)}
+.item img{width:100%;height:100%;min-height:280px;object-fit:cover}.item:nth-child(1){grid-column:span 7;grid-row:span 2}.item:nth-child(2){grid-column:span 5}.item:nth-child(3){grid-column:span 5}.item:nth-child(4){grid-column:span 4}.item:nth-child(5){grid-column:span 4}.item:nth-child(6){grid-column:span 4}
+.label{padding:16px;font-weight:700;font-size:19px}
+footer{margin-top:120px;background:var(--green);color:white;padding:60px 4%}footer span{color:var(--lime)}
+@media(max-width:700px){.nav-links{display:none}.menu{display:block}.gallery{display:block}.item{margin-bottom:25px}.item img{height:350px}header{margin-top:60px}}
+</style>
+</head>
+<body>
+<nav class="nav"><a class="logo" href="index.html">GREEN<span>BITE</span></a><div class="nav-links"><a href="index.html">Home</a><a href="services.html">Services</a><a href="work.html">Our Food</a><a href="process.html">Process</a><a href="contact.html">Contact</a></div><div class="menu">☰</div></nav>
+
+<header><h1>Made fresh.<br>Made <span>bright.</span></h1></header>
+
+<section class="gallery">
+<article class="item"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=85"><div class="label">Garden Power Bowl</div></article>
+<article class="item"><img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=85"><div class="label">Rainbow Salad</div></article>
+<article class="item"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=85"><div class="label">Daily Balance</div></article>
+<article class="item"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=85"><div class="label">Green Bowl</div></article>
+<article class="item"><img src="https://images.unsplash.com/photo-1543352634-a1c51d9f1fa7?auto=format&fit=crop&w=800&q=85"><div class="label">Fresh Lunch</div></article>
+<article class="item"><img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=800&q=85"><div class="label">Fresh Ingredients</div></article>
+</section>
+
+<footer><h2>Eat colorful. <span>Live fully.</span></h2></footer>
+</body>
+</html>
