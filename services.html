@@ -1,57 +1,97 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services — GREENBITE</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Prompt:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--cream:#F7F0DF;--light:#FFF9EC;--green:#163C2A;--lime:#C9E86A;--orange:#F28C45;--black:#171713}
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--cream);color:var(--black);font-family:Prompt,sans-serif}
-a{color:inherit;text-decoration:none}
-.nav{width:92%;max-width:1180px;margin:20px auto;display:flex;justify-content:space-between;align-items:center;border:3px solid;padding:13px 18px;background:var(--light);box-shadow:5px 5px #171713}
-.logo{font-size:25px;font-weight:800}.logo span{color:var(--orange)}
-.nav-links{display:flex;gap:25px;font-weight:600;font-size:14px}.nav-links a:hover{color:var(--orange)}
-.menu{display:none;font-size:25px}
-.hero{width:92%;max-width:1180px;margin:90px auto 100px}
-.tag{background:var(--lime);border:3px solid;padding:6px 12px;font-weight:700;display:inline-block;transform:rotate(-2deg)}
-h1{font-size:clamp(60px,9vw,115px);line-height:.85;letter-spacing:-5px;margin-top:25px}
-h1 span{color:var(--orange)}
-.intro{font-family:"DM Sans";font-size:19px;line-height:1.6;max-width:650px;margin-top:30px}
-.grid{width:92%;max-width:1180px;margin:auto;display:grid;grid-template-columns:repeat(2,1fr);gap:30px}
-.card{border:3px solid;background:var(--light);padding:35px;box-shadow:8px 8px #171713;min-height:330px;transition:.25s}
-.card:hover{background:var(--green);color:white;transform:translateY(-8px)}
-.number{font-family:"DM Sans";font-size:60px;font-weight:700;color:var(--orange)}
-.card h2{font-size:30px;margin:20px 0 10px}.card p{font-family:"DM Sans";line-height:1.6}
-footer{margin-top:120px;background:var(--green);color:var(--cream);padding:55px 4%}
-footer h2{font-size:35px}footer span{color:var(--lime)}
-@media(max-width:700px){.nav-links{display:none}.menu{display:block}.grid{grid-template-columns:1fr}.hero{margin-top:60px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — GREENBITE</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
 <nav class="nav">
-<a class="logo" href="index.html">GREEN<span>BITE</span></a>
-<div class="nav-links">
-<a href="index.html">Home</a><a href="services.html">Services</a><a href="work.html">Our Food</a><a href="process.html">Process</a><a href="contact.html">Contact</a>
-</div><div class="menu">☰</div>
+  <a class="logo" href="index.html">GREEN<span>BITE</span></a>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a class="active" href="services.html">Services</a>
+    <a href="work.html">Our Food</a>
+    <a href="process.html">Process</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <button class="menu-toggle">☰</button>
 </nav>
 
-<section class="hero">
-<span class="tag">WHAT WE DO</span>
-<h1>Food that<br>works <span>for you.</span></h1>
-<p class="intro">เราไม่ได้ขายแค่อาหาร แต่สร้างประสบการณ์การกินที่ดีต่อร่างกายและเข้ากับชีวิตประจำวันของคุณ</p>
+<main>
+
+<header class="container page-hero">
+
+  <span class="tag">WHAT WE DO</span>
+
+  <h1 class="page-title">
+    Food that<br>
+    works <span>for you.</span>
+  </h1>
+
+  <p class="page-description">
+    เราไม่ได้ขายแค่อาหาร แต่สร้างประสบการณ์การกิน
+    ที่ดีต่อร่างกายและเข้ากับชีวิตประจำวันของคุณ
+  </p>
+
+</header>
+
+<section class="container service-grid">
+
+  <article class="service-card">
+    <div class="service-number">01</div>
+    <h2>Healthy Meal</h2>
+    <p>
+      มื้ออาหารเพื่อสุขภาพที่วางสัดส่วนสารอาหารอย่างเหมาะสม
+      พร้อมวัตถุดิบสดใหม่ทุกวัน
+    </p>
+  </article>
+
+  <article class="service-card">
+    <div class="service-number">02</div>
+    <h2>Meal Plan</h2>
+    <p>
+      วางแผนมื้ออาหารสำหรับคนทำงาน คนออกกำลังกาย
+      หรือผู้ที่อยากเริ่มต้นดูแลตัวเอง
+    </p>
+  </article>
+
+  <article class="service-card">
+    <div class="service-number">03</div>
+    <h2>Office Catering</h2>
+    <p>
+      บริการจัดอาหารเพื่อสุขภาพสำหรับประชุม
+      อีเวนต์ และกิจกรรมขององค์กร
+    </p>
+  </article>
+
+  <article class="service-card">
+    <div class="service-number">04</div>
+    <h2>Custom Menu</h2>
+    <p>
+      ออกแบบเมนูตามความต้องการของคุณ
+      ทั้งวัตถุดิบ รสชาติ และรูปแบบการรับประทาน
+    </p>
+  </article>
+
 </section>
 
-<section class="grid">
-<article class="card"><div class="number">01</div><h2>Healthy Meal</h2><p>มื้ออาหารเพื่อสุขภาพที่วางสัดส่วนสารอาหารอย่างเหมาะสม พร้อมวัตถุดิบสดใหม่ทุกวัน</p></article>
-<article class="card"><div class="number">02</div><h2>Meal Plan</h2><p>วางแผนมื้ออาหารสำหรับคนทำงาน คนออกกำลังกาย หรือผู้ที่อยากเริ่มต้นดูแลตัวเอง</p></article>
-<article class="card"><div class="number">03</div><h2>Office Catering</h2><p>บริการจัดอาหารเพื่อสุขภาพสำหรับประชุม อีเวนต์ และกิจกรรมขององค์กร</p></article>
-<article class="card"><div class="number">04</div><h2>Custom Menu</h2><p>ออกแบบเมนูตามความต้องการของคุณ ทั้งวัตถุดิบ รสชาติ และรูปแบบการรับประทาน</p></article>
-</section>
+</main>
 
-<footer><h2>GREEN<span>BITE</span> — Eat better. Feel better.</h2></footer>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">GREEN<span>BITE</span></div>
+    <p>Eat better. Feel better.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
